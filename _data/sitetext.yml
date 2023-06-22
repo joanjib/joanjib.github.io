@@ -172,7 +172,7 @@ es: &DEFAULT_ES
         social:
           - url: https://www.linkedin.com/in/joan-iglesias-blanch/
             icon: fab fa-linkedin-in
-      - name: "Mercè Torralba"
+      - name: "Mercè Torralba Rimbau"
         role: "Asesora con experiencia en residencias"
         image: assets/img/team/2.jpeg
         social:
