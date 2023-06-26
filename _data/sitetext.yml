@@ -161,7 +161,7 @@ es: &DEFAULT_ES
     section: nosotros
 
   team:
-    title: "NUESTRO INCREÍBLE EQUIPO"
+    title: "NUESTRO EQUIPO"
     text: 
     subtext: 
     section: equipo
