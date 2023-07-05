@@ -121,7 +121,7 @@ es: &DEFAULT_ES
     title: Bienvenidos a ...
     text: Fullness Care
     button: Ver más
-    buttonlink: "#news"
+    buttonlink: "#nosotros"
 
   about2:
     title: "NEWS"
