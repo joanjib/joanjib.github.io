@@ -40,6 +40,8 @@ es: &DEFAULT_ES
   nav:
     - title: "El proyecto"
       section: nosotros
+    - title: "News"
+      section: news
     - title: "Cronología"
       section: cronologia
     - title: "Equipo"
