@@ -126,7 +126,7 @@ es: &DEFAULT_ES
   about2:
     title: "NEWS"
     text: 
-    body: "<h1>2023-7-5</h1>Publicado en github primer código bajo licencia AGPL v3: un servidor de peticiones amqp, con persistencia de datos incluida. Cada servicio se implementa en método, en el que el programador puede vincular código Python y SQL de forma fácil, y recibir y enviar mensajes amqp de forma fácil.<br><br><a href='https://github.com/joanjib/fullness-server-python'>Fullness.care server</a>"
+    body: "<h1>2023-7-5</h1>Reimplementado el servidor de Python a Golang, para lograr mayor escalado y estavilidad."
     section: news
 
   timeline:
