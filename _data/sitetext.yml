@@ -126,7 +126,7 @@ es: &DEFAULT_ES
   about2:
     title: "NEWS"
     text: 
-    body: "<h1>2023-7-5</h1>Reimplementado el servidor de Python a Golang, para lograr mayor escalado y estavilidad."
+    body: "<h1>2023-8-4</h1><p>Primer prototipo del servidor en Golang (servidor para misiones críticas). Mas información en: <a href='https://github.com/joanjib/mcserver'><h4>mcserver</h4></a></p><p><h1>2023-7-5</h1>Reimplementado el servidor de Python a Golang, para lograr mayor escalado y estavilidad.</p>"
     section: news
 
   timeline:
