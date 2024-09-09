@@ -122,10 +122,12 @@
 												<label for="message">Mensaje</label>
 												<textarea name="message" id="message" rows="5"></textarea>
 											</div>
+											<div class="field">
+												<label for="capcha">Escriba las siguientes letras <span id="captcha-text"></span></label>
+												<input type="text" name="capcha" id="captcha-input" />
+											</div>
 										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Enviar mensaje</a></li>
-										</ul>
+										<button type="button" onclick="validarCaptcha()">Enviar mensaje</button>
 									</form>
 								</section>
 							</div>
@@ -152,6 +154,30 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Generar un texto aleatorio
+				const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+				let captchaTexto = '';
+				for (let i = 0; i < 6; i++) {
+					captchaTexto += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+				}
+				document.getElementById('captcha-text').textContent = captchaTexto;
+			
+				// Validar CAPTCHA
+				function validarCaptcha() {
+					const input = document.getElementById('captcha-input').value;
+					if (input !== captchaTexto) {
+						alert('Captcha incorrecto. Intente de nuevo.');
+						return false;
+					}
+					return true;
+				}
+				/*
+				const formulario = document.getElementById('form-data');
+				formulario.addEventListener('submit', function(event) {
+					event.preventDefault();				
+				}*/
+			</script>			
 
 	</body>
 </html>
