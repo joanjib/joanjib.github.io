@@ -154,6 +154,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript"
+				src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+			</script>			
 			<script>
 				// Generar un texto aleatorio
 				const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -170,13 +173,26 @@
 						alert('Captcha incorrecto. Intente de nuevo.');
 						return false;
 					}
-					return true;
+					var data = {
+						service_id: 'joanmail',
+						template_id: 'template_13xhpjf',
+						user_id: 'Gf5JNwWO3-onprJT5',
+						template_params: {
+							'name': document.getElementById('name').value,
+							"mail" : document.getElementById('email').value,
+							"message" : document.getElementById('message').value
+						}
+					};					
+					$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+						type: 'POST',
+						data: JSON.stringify(data),
+						contentType: 'application/json'
+					}).done(function() {
+						alert('Mensaje enviado');
+					}).fail(function(error) {
+						alert('Error al enviar el mensaje');
+					});					
 				}
-				/*
-				const formulario = document.getElementById('form-data');
-				formulario.addEventListener('submit', function(event) {
-					event.preventDefault();				
-				}*/
 			</script>			
 
 	</body>
