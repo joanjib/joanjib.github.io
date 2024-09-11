@@ -10,6 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>		
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -122,7 +124,16 @@
 										<br>
 										(versión en inglés)
 									</p>
-									<img src="./images/pic05.png" alt="Captura de pantalla" style="width: 90%; height: auto;">
+									<!--<img src="./images/pic05.png" alt="Captura de pantalla" style="width: 90%; height: auto;">-->
+									<div class="glide">
+										<div class="glide__track" data-glide-el="track">
+										  <ul class="glide__slides">
+											<li class="glide__slide"><img src="./images/pic04.png" style="width: 90%; height: auto;" alt="Captura de pantalla"></li>
+											<li class="glide__slide"><img src="./images/pic05.png" style="width: 90%; height: auto;" alt="Captura de pantalla"></li>
+											<li class="glide__slide"><img src="./images/pic06.png" style="width: 90%; height: auto;" alt="Captura de pantalla"></li>
+										  </ul>
+										</div>
+									  </div>
 								</div>
 							</div>
 						</div>
@@ -185,7 +196,12 @@
 				src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 			</script>
 			<script>
-				// Generar un texto aleatorio
+				new Glide('.glide', {
+					type: 'carousel',
+					autoplay: 3000,
+					perView: 1,
+				}).mount();
+  				// Generar un texto aleatorio
 				const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 				let captchaTexto = '';
 				for (let i = 0; i < 6; i++) {
